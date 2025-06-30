@@ -121,7 +121,7 @@ export class AnalyticsService {
   }
 
   // Generate health report
-  static async generateHealthReport(userId: string, timeRange: '30d' | '90d' | '1y' = '30d'): Promise<any> {
+  static async generateHealthReport(userId: string, timeRange: '7d' | '30d' | '90d' | '1y' = '30d'): Promise<any> {
     try {
       const metrics = await this.getHealthMetrics(userId, timeRange);
       const engagement = await this.getUserEngagement(userId);
